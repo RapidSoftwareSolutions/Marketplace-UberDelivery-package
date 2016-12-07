@@ -52,9 +52,9 @@ $app->post('/api/UberDelivery/getAccessToken', function ($request, $response, $a
 
     try {
 
-        $resp = $client->get( $query_str, 
+        $resp = $client->post( $query_str, 
             [
-                'query' => $query
+                'form_params' => $query
             ]);
         $responseBody = $resp->getBody()->getContents();
         $code = $resp->getStatusCode();
@@ -74,21 +74,21 @@ $app->post('/api/UberDelivery/getAccessToken', function ($request, $response, $a
         $responseBody = $exception->getResponse()->getBody();
         $result['callback'] = 'error';
         $result['contextWrites']['to']['status_code'] = 'API_ERROR';
-        $result['contextWrites']['to']['status_msg'] = json_decode($responseBody);
+        $result['contextWrites']['to']['status_msg'] = is_array($responseBody) ? $responseBody : json_decode($responseBody);
 
     } catch (GuzzleHttp\Exception\ServerException $exception) {
 
         $responseBody = $exception->getResponse()->getBody(true);
         $result['callback'] = 'error';
         $result['contextWrites']['to']['status_code'] = 'API_ERROR';
-        $result['contextWrites']['to']['status_msg'] = json_decode($responseBody);
+        $result['contextWrites']['to']['status_msg'] = is_array($responseBody) ? $responseBody : json_decode($responseBody);
 
     } catch (GuzzleHttp\Exception\BadResponseException $exception) {
 
         $responseBody = $exception->getResponse()->getBody(true);
         $result['callback'] = 'error';
         $result['contextWrites']['to']['status_code'] = 'API_ERROR';
-        $result['contextWrites']['to']['status_msg'] = json_decode($responseBody);
+        $result['contextWrites']['to']['status_msg'] = is_array($responseBody) ? $responseBody : json_decode($responseBody);
 
     } catch (GuzzleHttp\Exception\ConnectException $exception) {
 
