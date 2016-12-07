@@ -1,6 +1,6 @@
 <?php
 
-$app->post('/api/Uber/getAccessToken', function ($request, $response, $args) {
+$app->post('/api/UberDelivery/getAccessToken', function ($request, $response, $args) {
     $settings =  $this->settings;
     
     $data = $request->getBody();
