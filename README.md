@@ -10,6 +10,16 @@ Request an Uber or Uber delivery all from within your app.
 1. Sign in or Log in
 2. Register an UberRush app.
 
+## Custom datatypes:
+ |Datatype|Description|Example
+ |--------|-----------|----------
+ |Datepicker|String which includes date and time|```2016-05-28 00:00:00```
+ |Map|String which includes latitude and longitude coma separated|```50.37, 26.56```
+ |List|Simple array|```["123", "sample"]```
+ |Select|String with predefined values|```sample```
+ |Array|Array of objects|```[{"Second name":"123","Age":"12","Photo":"sdf","Draft":"sdfsdf"},{"name":"adi","Second name":"bla","Age":"4","Photo":"asfserwe","Draft":"sdfsdf"}] ```
+
+
 
 ## UberDelivery.getAccessToken
 Generate Access Token.
@@ -57,13 +67,11 @@ The Delivery endpoint allows a delivery to be requested given the delivery infor
 | itemsWeight                         | String| Optional: The weight of the item in pounds.
 | itemsIsFragile                      | String| Optional: If the item is fragile. True or false. Default to false.
 | pickupLocationAddress2              | String| Optional: The second address line of the delivery pickup location such as the apartment number. Limited to 128 characters.
-| pickupLocationLatitude              | String| Optional: Latitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
-| pickupLocationLongitude             | String| Optional: Longitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
+| pickupLocation              | Map| Optional: Latitude and longitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
 | pickupContactCompanyName            | String| Optional: The company name of the contact. Limited to 128 characters.
 | pickupContactPhoneSmsEnabled        | String| Optional: If the phone has SMS capabilities. True or false.
 | pickupSpecialInstructions           | String| Optional: Special instructions for the pickup. Limited to 256 characters.
-| dropoffLocationLatitude             | String| Optional: Latitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
-| dropoffLocationLongitude            | String| Optional: Longitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
+| dropoffLocation             | Map| Optional: Latitude and longitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
 | dropoffContactSendEmailNotifications| String| Optional: If Uber should send email delivery notifications. True or false. Default to true.
 | dropoffContactSendSmsNotifications  | String| Optional: If Uber should send SMS delivery notifications. True or false. Default to true.
 | dropoffSpecialInstructions          | String| Optional: Special instructions for the drop-off. Limited to 256 characters.
@@ -118,7 +126,5 @@ Generate a delivery quote, given a pickup and dropoff location. On-demand and sc
 | dropoffLocationPostalCode| String| The postal code of the delivery drop-off location.
 | dropoffLocationCountry   | String| The country of the delivery pickup location such as "US".
 | pickupLocationAddress2   | String| Optional: The second address line of the delivery pickup location such as the apartment number. Limited to 128 characters.
-| pickupLocationLatitude   | String| Optional: Latitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
-| pickupLocationLongitude  | String| Optional: Longitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
-| dropoffLocationLatitude  | String| Optional: Latitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
-| dropoffLocationLongitude | String| Optional: Longitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
+| pickupLocation   | Map| Optional: Latitude ang longitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
+| dropoffLocation  | Map| Optional: Latitude and longitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.

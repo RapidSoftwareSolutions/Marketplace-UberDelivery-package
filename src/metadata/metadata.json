@@ -200,16 +200,11 @@
                     "info": "The second address line of the delivery pickup location such as the apartment number. Limited to 128 characters.",
                     "required": false
                 }, {
-                    "name": "pickupLocationLatitude",
-                    "type": "String",
-                    "info": "Latitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.",
+                    "name": "pickupLocation",
+                    "type": "Map",
+                    "info": "Latitude and longitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.",
                     "required": false
-                }, {
-                    "name": "pickupLocationLongitude",
-                    "type": "String",
-                    "info": "Longitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.",
-                    "required": false
-                }, {
+                },  {
                     "name": "pickupContactCompanyName",
                     "type": "String",
                     "info": "The company name of the contact. Limited to 128 characters.",
@@ -225,14 +220,9 @@
                     "info": "Special instructions for the pickup. Limited to 256 characters.",
                     "required": false
                 }, {
-                    "name": "dropoffLocationLatitude",
-                    "type": "String",
-                    "info": "Latitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.",
-                    "required": false
-                }, {
-                    "name": "dropoffLocationLongitude",
-                    "type": "String",
-                    "info": "Longitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.",
+                    "name": "dropoffLocation",
+                    "type": "Map",
+                    "info": "Latitude and longitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.",
                     "required": false
                 }, {
                     "name": "dropoffContactSendEmailNotifications",
@@ -429,24 +419,14 @@
                     "info": "The second address line of the delivery pickup location such as the apartment number. Limited to 128 characters.",
                     "required": false
                 }, {
-                    "name": "pickupLocationLatitude",
-                    "type": "String",
-                    "info": "Latitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.",
+                    "name": "pickupLocation",
+                    "type": "Map",
+                    "info": "Latitude ang longitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.",
                     "required": false
                 }, {
-                    "name": "pickupLocationLongitude",
-                    "type": "String",
-                    "info": "Longitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.",
-                    "required": false
-                }, {
-                    "name": "dropoffLocationLatitude",
-                    "type": "String",
-                    "info": "Latitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.",
-                    "required": false
-                }, {
-                    "name": "dropoffLocationLongitude",
-                    "type": "String",
-                    "info": "Longitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.",
+                    "name": "dropoffLocation",
+                    "type": "Map",
+                    "info": "Latitude and longitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.",
                     "required": false
                 }, {
                     "name": "sandbox",

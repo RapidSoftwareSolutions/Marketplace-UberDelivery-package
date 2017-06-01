@@ -74,12 +74,25 @@ $app->post('/api/UberDelivery/getQuote', function ($request, $response, $args) {
     if(!empty($post_data['args']['pickupLocationAddress2'])) {
         $body['pickup']['location']['address_2'] = $post_data['args']['pickupLocationAddress2'];
     }
+
+    if(!empty($post_data['args']['pickupLocation'])) {
+        $body['pickup']['location']['latitude'] = implode(",",$post_data['args']['pickupLocation'])[0];
+        $body['pickup']['location']['longitude'] = implode(",",$post_data['args']['pickupLocation'])[1];
+    }
+
     if(!empty($post_data['args']['pickupLocationLatitude'])) {
         $body['pickup']['location']['latitude'] = $post_data['args']['pickupLocationLatitude'];
     }
     if(!empty($post_data['args']['pickupLocationLongitude'])) {
         $body['pickup']['location']['longitude'] = $post_data['args']['pickupLocationLongitude'];
     }
+
+
+    if(!empty($post_data['args']['dropoffLocation'])) {
+        $body['dropoff']['location']['latitude'] = implode(",",$post_data['args']['dropoffLocation'])[0];
+        $body['dropoff']['location']['longitude'] = implode(",",$post_data['args']['dropoffLocation'])[1];
+    }
+
     if(!empty($post_data['args']['dropoffLocationLatitude'])) {
         $body['dropoff']['location']['latitude'] = $post_data['args']['dropoffLocationLatitude'];
     }
