@@ -105,7 +105,7 @@ Get a list of all deliveries, ordered chronologically by time of creation.
 | accessToken| String| The valid access token.
 | offset     | String| Offset the list of returned results by this amount.
 | limit      | String| Number of items to retrieve. Maximum is 50.
-| status     | String| A status value to filter for. List of status strings can be found https://developer.uber.com/docs/rush/statuses. Additionally supports a value of active that will return all ongoing deliveries. A delivery is considered active if the status field value is either en_route_to_pickup, at_pickup, en_route_to_dropoff or at_dropoff.
+| status     | Select| A status value to filter for. List of status strings can be found https://developer.uber.com/docs/rush/statuses. Additionally supports a value of active that will return all ongoing deliveries. A delivery is considered active if the status field value is either en_route_to_pickup, at_pickup, en_route_to_dropoff or at_dropoff.
 
 
 ## UberDelivery.getQuote

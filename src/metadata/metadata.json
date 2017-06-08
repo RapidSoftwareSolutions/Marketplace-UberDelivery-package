@@ -31,7 +31,8 @@
                     "name": "success",
                     "info": "Success"
                 }]
-        }, {
+        },
+        {
             "name": "requestDelivery",
             "description": "The Delivery endpoint allows a delivery to be requested given the delivery information and quote ID.",
             "args": [{
@@ -262,7 +263,8 @@
                     "name": "success",
                     "info": "Success"
                 }]
-        }, {
+        },
+        {
             "name": "getDelivery",
             "description": "Get the real time status of an ongoing delivery that was created using the Delivery endpoint.",
             "args": [{
@@ -288,7 +290,8 @@
                     "name": "success",
                     "info": "Success"
                 }]
-        }, {
+        },
+        {
             "name": "cancelDelivery",
             "description": "Cancels an existing delivery.",
             "args": [{
@@ -314,7 +317,8 @@
                     "name": "success",
                     "info": "Success"
                 }]
-        }, {
+        },
+        {
             "name": "getDeliveries",
             "description": "Get a list of all deliveries, ordered chronologically by time of creation.",
             "args": [{
@@ -329,12 +333,13 @@
                     "required": true
                 }, {
                     "name": "limit",
-                    "type": "String",
+                    "type": "Number",
                     "info": "Number of items to retrieve. Maximum is 50.",
                     "required": true
                 }, {
                     "name": "status",
-                    "type": "String",
+                    "type": "Select",
+                    "options": ["en_route_to_pickup","at_pickup","en_route_to_dropoff","at_dropoff"],
                     "info": "A status value to filter for. List of status strings can be found https:\/\/developer.uber.com\/docs\/rush\/statuses. Additionally supports a value of active that will return all ongoing deliveries. A delivery is considered active if the status field value is either en_route_to_pickup, at_pickup, en_route_to_dropoff or at_dropoff.",
                     "required": true
                 }, {
@@ -350,7 +355,8 @@
                     "name": "success",
                     "info": "Success"
                 }]
-        }, {
+        },
+        {
             "name": "getQuote",
             "description": "Generate a delivery quote, given a pickup and dropoff location. On-demand and scheduled delivery quotes will be returned.",
             "args": [{
