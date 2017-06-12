@@ -2,7 +2,7 @@
 
 # UberDelivery Package
 Request an Uber or Uber delivery all from within your app.
-* Domain: uber.com
+* Domain: [https://uber.com](https://uber.com)
 * Credentials: clientId, clientSecret
 
 ## How to get credentials: 
