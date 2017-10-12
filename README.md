@@ -36,7 +36,7 @@ The Delivery endpoint allows a delivery to be requested given the delivery infor
 |-------------------------------------|-------|----------
 | accessToken                         | String| The valid access token.
 | itemsTitle                          | String| The title of the item. Limited to 128 characters.
-| itemsQuantity                       | String| The number of this item.
+| itemsQuantity                       | Number| The number of this item.
 | itemsPrice                          | String| The price of the item.
 | itemsCurrencyCode                   | String| The currency code of the item price. The currency code follows the ISO 4217 standard.
 | pickupLocationAddress               | String| The top address line of the delivery pickup location.
@@ -77,6 +77,8 @@ The Delivery endpoint allows a delivery to be requested given the delivery infor
 | dropoffSpecialInstructions          | String| Optional: Special instructions for the drop-off. Limited to 256 characters.
 | dropoffSignatureRequired            | String| Optional: If signature is required for drop-off. True or false. Default to false.
 | includesAlcohol                     | String| Optional: Indicates if the delivery includes alcohol. True or false. This feature is only available to whitelisted businesses.
+| sandbox                          | String| Optional: UberAPI Sandbox: True || False
+
 
 
 ## UberDelivery.getDelivery
@@ -86,6 +88,7 @@ Get the real time status of an ongoing delivery that was created using the Deliv
 |------------|-------|----------
 | accessToken| String| The valid access token.
 | deliveryId | String| Unique identifier representing a Delivery.
+| sandbox                          | String| Optional: UberAPI Sandbox: True || False
 
 
 ## UberDelivery.cancelDelivery
@@ -95,6 +98,7 @@ Cancels an existing delivery.
 |------------|-------|----------
 | accessToken| String| The valid access token.
 | deliveryId | String| Unique identifier representing a Delivery.
+| sandbox                          | String| Optional: UberAPI Sandbox: True || False
 
 
 ## UberDelivery.getDeliveries
@@ -103,9 +107,10 @@ Get a list of all deliveries, ordered chronologically by time of creation.
 | Field      | Type  | Description
 |------------|-------|----------
 | accessToken| String| The valid access token.
-| offset     | String| Offset the list of returned results by this amount.
-| limit      | String| Number of items to retrieve. Maximum is 50.
+| offset     | Number| Offset the list of returned results by this amount.
+| limit      | Number| Number of items to retrieve. Maximum is 50.
 | status     | Select| A status value to filter for. List of status strings can be found https://developer.uber.com/docs/rush/statuses. Additionally supports a value of active that will return all ongoing deliveries. A delivery is considered active if the status field value is either en_route_to_pickup, at_pickup, en_route_to_dropoff or at_dropoff.
+| sandbox                          | String| Optional: UberAPI Sandbox: True || False
 
 
 ## UberDelivery.getQuote
@@ -128,3 +133,4 @@ Generate a delivery quote, given a pickup and dropoff location. On-demand and sc
 | pickupLocationAddress2   | String| Optional: The second address line of the delivery pickup location such as the apartment number. Limited to 128 characters.
 | pickupLocation   | Map| Optional: Latitude ang longitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
 | dropoffLocation  | Map| Optional: Latitude and longitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
+| sandbox                          | String| Optional: UberAPI Sandbox: True || False
