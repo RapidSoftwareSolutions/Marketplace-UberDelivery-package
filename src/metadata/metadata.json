@@ -157,7 +157,7 @@
             }, {
                 "name": "dropoffContactPhoneSmsEnabled",
                 "type": "Select",
-                "options": ["true", "false"],
+                "options": ["1"],
                 "info": "If the phone has SMS capabilities. True or false.",
                 "required": true
             }, {
@@ -193,7 +193,7 @@
             }, {
                 "name": "itemsIsFragile",
                 "type": "Select",
-                "options": ["true", "false"],
+                "options": ["1"],
                 "info": "If the item is fragile. True or false. Default to false.",
                 "required": false
             }, {
@@ -214,7 +214,7 @@
             }, {
                 "name": "pickupContactPhoneSmsEnabled",
                 "type": "Select",
-                "options": ["true", "false"],
+                "options": ["1"],
                 "info": "If the phone has SMS capabilities. True or false.",
                 "required": false
             }, {
@@ -230,13 +230,13 @@
             }, {
                 "name": "dropoffContactSendEmailNotifications",
                 "type": "Select",
-                "options": ["true", "false"],
+                "options": ["1"],
                 "info": "If Uber should send email delivery notifications. True or false. Default to true.",
                 "required": false
             }, {
                 "name": "dropoffContactSendSmsNotifications",
                 "type": "Select",
-                "options": ["true", "false"],
+                "options": ["1"],
                 "info": "If Uber should send SMS delivery notifications. True or false. Default to true.",
                 "required": false
             }, {
@@ -247,19 +247,19 @@
             }, {
                 "name": "dropoffSignatureRequired",
                 "type": "Select",
-                "options": ["true", "false"],
+                "options": ["1"],
                 "info": "If signature is required for drop-off. True or false. Default to false.",
                 "required": false
             }, {
                 "name": "includesAlcohol",
                 "type": "Select",
-                "options": ["true", "false"],
+                "options": ["1"],
                 "info": "Indicates if the delivery includes alcohol. True or false. This feature is only available to whitelisted businesses.",
                 "required": false
             }, {
                 "name": "sandbox",
                 "type": "Select",
-                "options": ["true", "false"],
+                "options": ["1"],
                 "info": "UberAPI Sandbox: True || False",
                 "required": false
             }],
@@ -287,7 +287,7 @@
             }, {
                 "name": "sandbox",
                 "type": "Select",
-                "options": ["true", "false"],
+                "options": ["1"],
                 "info": "UberAPI Sandbox: True || False",
                 "required": false
             }],
@@ -315,8 +315,7 @@
             }, {
                 "name": "sandbox",
                 "type": "Select",
-                "type": "Select",
-                "options": ["true", "false"],
+                "options": ["1"],
                 "info": "UberAPI Sandbox: True || False",
                 "required": false
             }],
@@ -355,7 +354,7 @@
             }, {
                 "name": "sandbox",
                 "type": "Select",
-                "options": ["true", "false"],
+                "options": ["1"],
                 "info": "UberAPI Sandbox: True || False",
                 "required": false
             }],
@@ -448,7 +447,7 @@
             }, {
                 "name": "sandbox",
                 "type": "Select",
-                "options": ["true", "false"],
+                "options": ["1"],
                 "info": "UberAPI Sandbox: True || False",
                 "required": false
             }],

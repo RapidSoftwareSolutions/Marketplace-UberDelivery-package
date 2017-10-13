@@ -77,7 +77,7 @@ The Delivery endpoint allows a delivery to be requested given the delivery infor
 | dropoffSpecialInstructions          | String| Optional: Special instructions for the drop-off. Limited to 256 characters.
 | dropoffSignatureRequired            | String| Optional: If signature is required for drop-off. True or false. Default to false.
 | includesAlcohol                     | String| Optional: Indicates if the delivery includes alcohol. True or false. This feature is only available to whitelisted businesses.
-| sandbox                          | String| Optional: UberAPI Sandbox: True || False
+| sandbox                          | String| Optional: UberAPI Sandbox: 1 to select sandbox
 
 
 
@@ -88,7 +88,7 @@ Get the real time status of an ongoing delivery that was created using the Deliv
 |------------|-------|----------
 | accessToken| String| The valid access token.
 | deliveryId | String| Unique identifier representing a Delivery.
-| sandbox                          | String| Optional: UberAPI Sandbox: True || False
+| sandbox                          | String| Optional: UberAPI Sandbox: 1 to select sandbox
 
 
 ## UberDelivery.cancelDelivery
@@ -98,7 +98,7 @@ Cancels an existing delivery.
 |------------|-------|----------
 | accessToken| String| The valid access token.
 | deliveryId | String| Unique identifier representing a Delivery.
-| sandbox                          | String| Optional: UberAPI Sandbox: True || False
+| sandbox                          | String| Optional: UberAPI Sandbox: 1 to select sandbox
 
 
 ## UberDelivery.getDeliveries
@@ -110,7 +110,7 @@ Get a list of all deliveries, ordered chronologically by time of creation.
 | offset     | Number| Offset the list of returned results by this amount.
 | limit      | Number| Number of items to retrieve. Maximum is 50.
 | status     | Select| A status value to filter for. List of status strings can be found https://developer.uber.com/docs/rush/statuses. Additionally supports a value of active that will return all ongoing deliveries. A delivery is considered active if the status field value is either en_route_to_pickup, at_pickup, en_route_to_dropoff or at_dropoff.
-| sandbox                          | String| Optional: UberAPI Sandbox: True || False
+| sandbox                          | String| Optional: UberAPI Sandbox: 1 to select sandbox
 
 
 ## UberDelivery.getQuote
@@ -122,7 +122,7 @@ Generate a delivery quote, given a pickup and dropoff location. On-demand and sc
 | pickupLocationAddress    | String| The top address line of the delivery pickup location.
 | pickupLocationCity       | String| The city of the delivery pickup location.
 | pickupLocationState      | String| The state of the delivery pickup location such as "CA".
-| pickupLocationPostalCode | String| The postal code of the delivery pickup location.
+| pickupLocationPostalCode | String| The postal qcode of the delivery pickup location.
 | pickupLocationCountry    | String| The country of the pickup location such as "US".
 | dropoffLocationAddress   | String| The top address line of the delivery drop-off location.
 | dropoffLocationAddress2  | String| The second address line of the delivery drop-off location such as the apartment number. Limited to 128 characters.
@@ -133,4 +133,4 @@ Generate a delivery quote, given a pickup and dropoff location. On-demand and sc
 | pickupLocationAddress2   | String| Optional: The second address line of the delivery pickup location such as the apartment number. Limited to 128 characters.
 | pickupLocation   | Map| Optional: Latitude ang longitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
 | dropoffLocation  | Map| Optional: Latitude and longitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
-| sandbox                          | String| Optional: UberAPI Sandbox: True || False
+| sandbox                          | String| Optional: UberAPI Sandbox: 1 to select sandbox
