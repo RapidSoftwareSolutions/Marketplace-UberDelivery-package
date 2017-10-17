@@ -159,7 +159,7 @@
                 "type": "Select",
                 "options": ["1"],
                 "info": "If the phone has SMS capabilities. True or false.",
-                "required": true
+                "required": false
             }, {
                 "name": "quoteId",
                 "type": "String",
@@ -260,7 +260,7 @@
                 "name": "sandbox",
                 "type": "Select",
                 "options": ["1"],
-                "info": "UberAPI Sandbox: True || False",
+                "info": "UberAPI Sandbox: 1 to set to sandbox",
                 "required": false
             }],
             "callbacks": [{
@@ -288,7 +288,7 @@
                 "name": "sandbox",
                 "type": "Select",
                 "options": ["1"],
-                "info": "UberAPI Sandbox: True || False",
+                "info": "UberAPI Sandbox: 1 to set to sandbox",
                 "required": false
             }],
             "callbacks": [{
@@ -316,7 +316,7 @@
                 "name": "sandbox",
                 "type": "Select",
                 "options": ["1"],
-                "info": "UberAPI Sandbox: True || False",
+                "info": "UberAPI Sandbox: 1 to set to sandbox",
                 "required": false
             }],
             "callbacks": [{
@@ -355,7 +355,7 @@
                 "name": "sandbox",
                 "type": "Select",
                 "options": ["1"],
-                "info": "UberAPI Sandbox: True || False",
+                "info": "UberAPI Sandbox: 1 to set to sandbox",
                 "required": false
             }],
             "callbacks": [{
@@ -448,7 +448,7 @@
                 "name": "sandbox",
                 "type": "Select",
                 "options": ["1"],
-                "info": "UberAPI Sandbox: True || False",
+                "info": "UberAPI Sandbox: 1 to set to sandbox",
                 "required": false
             }],
             "callbacks": [{
