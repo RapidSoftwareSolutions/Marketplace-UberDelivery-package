@@ -157,9 +157,9 @@
             }, {
                 "name": "dropoffContactPhoneSmsEnabled",
                 "type": "Select",
-                "options": ["1"],
+                "options": ["1", "0"],
                 "info": "If the phone has SMS capabilities. True or false.",
-                "required": false
+                "required": true
             }, {
                 "name": "quoteId",
                 "type": "String",
