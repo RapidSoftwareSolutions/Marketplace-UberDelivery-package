@@ -75,7 +75,7 @@ $app->post('/api/UberDelivery/requestDelivery', function ($request, $response, $
         $error[] = 'accessToken';
     }
     foreach($reqFields as $field) {
-        if(empty($post_data['args'][$field])) {
+        if(strlen($post_data['args'][$field]) == 0) {
             $error[] = $field;
         }
     }

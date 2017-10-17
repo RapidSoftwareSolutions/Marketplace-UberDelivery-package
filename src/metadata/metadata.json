@@ -158,7 +158,7 @@
                 "name": "dropoffContactPhoneSmsEnabled",
                 "type": "Select",
                 "options": ["1", "0"],
-                "info": "If the phone has SMS capabilities. True or false.",
+                "info": "If the phone has SMS capabilities. 1 or 0",
                 "required": true
             }, {
                 "name": "quoteId",
@@ -194,7 +194,7 @@
                 "name": "itemsIsFragile",
                 "type": "Select",
                 "options": ["1"],
-                "info": "If the item is fragile. True or false. Default to false.",
+                "info": "If the item is fragile. 1 if true",
                 "required": false
             }, {
                 "name": "pickupLocationAddress2",
@@ -215,7 +215,7 @@
                 "name": "pickupContactPhoneSmsEnabled",
                 "type": "Select",
                 "options": ["1"],
-                "info": "If the phone has SMS capabilities. True or false.",
+                "info": "If the phone has SMS capabilities. 1 or 0",
                 "required": false
             }, {
                 "name": "pickupSpecialInstructions",
@@ -231,13 +231,13 @@
                 "name": "dropoffContactSendEmailNotifications",
                 "type": "Select",
                 "options": ["1"],
-                "info": "If Uber should send email delivery notifications. True or false. Default to true.",
+                "info": "If Uber should send email delivery notifications. 1 if true",
                 "required": false
             }, {
                 "name": "dropoffContactSendSmsNotifications",
                 "type": "Select",
                 "options": ["1"],
-                "info": "If Uber should send SMS delivery notifications. True or false. Default to true.",
+                "info": "If Uber should send SMS delivery notifications. 1 if true",
                 "required": false
             }, {
                 "name": "dropoffSpecialInstructions",
@@ -248,13 +248,13 @@
                 "name": "dropoffSignatureRequired",
                 "type": "Select",
                 "options": ["1"],
-                "info": "If signature is required for drop-off. True or false. Default to false.",
+                "info": "If signature is required for drop-off. 1 if true",
                 "required": false
             }, {
                 "name": "includesAlcohol",
                 "type": "Select",
                 "options": ["1"],
-                "info": "Indicates if the delivery includes alcohol. True or false. This feature is only available to whitelisted businesses.",
+                "info": "Indicates if the delivery includes alcohol. 1 if true. This feature is only available to whitelisted businesses.",
                 "required": false
             }, {
                 "name": "sandbox",

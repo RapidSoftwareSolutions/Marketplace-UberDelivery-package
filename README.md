@@ -58,25 +58,25 @@ The Delivery endpoint allows a delivery to be requested given the delivery infor
 | dropoffContactLastName              | String| The last name of the contact. Limited to 128 characters.
 | dropoffContactEmail                 | String| The email of the contact.
 | dropoffContactPhoneNumber           | String| The phone number of the contact.
-| dropoffContactPhoneSmsEnabled       | String| If the phone has SMS capabilities. True or false.
+| dropoffContactPhoneSmsEnabled       | String| If the phone has SMS capabilities. 1 or 0
 | quoteId                             | String| Optional: The ID of the quoted price of the delivery. This field is optional. If missing, the fee for the delivery will be determined at the time of request.
 | orderReferenceId                    | String| Optional: The merchant-supplied order reference identifier. This field is optional. Limited to 256 characters.
 | itemsWidth                          | String| Optional: The width of the item in inches.
 | itemsHeight                         | String| Optional: The height of the item in inches.
 | itemsLength                         | String| Optional: The length of the item in inches.
 | itemsWeight                         | String| Optional: The weight of the item in pounds.
-| itemsIsFragile                      | String| Optional: If the item is fragile. True or false. Default to false.
+| itemsIsFragile                      | String| Optional: If the item is fragile. 1 if true
 | pickupLocationAddress2              | String| Optional: The second address line of the delivery pickup location such as the apartment number. Limited to 128 characters.
 | pickupLocation              | Map| Optional: Latitude and longitude of the pickup location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
 | pickupContactCompanyName            | String| Optional: The company name of the contact. Limited to 128 characters.
-| pickupContactPhoneSmsEnabled        | String| Optional: If the phone has SMS capabilities. True or false.
+| pickupContactPhoneSmsEnabled        | String| Optional: If the phone has SMS capabilities. 1 if true
 | pickupSpecialInstructions           | String| Optional: Special instructions for the pickup. Limited to 256 characters.
 | dropoffLocation             | Map| Optional: Latitude and longitude of the dropoff location. If UberRUSH cannot geocode the given address, the latitude and longitude coordinates will be used if provided.
-| dropoffContactSendEmailNotifications| String| Optional: If Uber should send email delivery notifications. True or false. Default to true.
-| dropoffContactSendSmsNotifications  | String| Optional: If Uber should send SMS delivery notifications. True or false. Default to true.
+| dropoffContactSendEmailNotifications| String| Optional: If Uber should send email delivery notifications. 1 if true Default to true.
+| dropoffContactSendSmsNotifications  | String| Optional: If Uber should send SMS delivery notifications. 1 if true Default to true.
 | dropoffSpecialInstructions          | String| Optional: Special instructions for the drop-off. Limited to 256 characters.
-| dropoffSignatureRequired            | String| Optional: If signature is required for drop-off. True or false. Default to false.
-| includesAlcohol                     | String| Optional: Indicates if the delivery includes alcohol. True or false. This feature is only available to whitelisted businesses.
+| dropoffSignatureRequired            | String| Optional: If signature is required for drop-off. 1 if true Default to false.
+| includesAlcohol                     | String| Optional: Indicates if the delivery includes alcohol. 1 if true This feature is only available to whitelisted businesses.
 | sandbox                          | String| Optional: UberAPI Sandbox: 1 to select sandbox
 
 
